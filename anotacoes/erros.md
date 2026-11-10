@@ -142,3 +142,21 @@ while True:
 ```
 
 Essa técnica é muito utilizada em sistemas reais.
+
+## Ordem de execução
+
+Fluxo completo:
+
+```python
+try
+except
+else
+finally
+```
+
+- try → tenta executar.
+- except → trata erros.
+- else → executa se não houver erro.
+- finally → executa sempre.
+
+O bloco finally é executado independentemente do resultado da operação.
