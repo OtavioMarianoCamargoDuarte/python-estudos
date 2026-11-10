@@ -203,3 +203,22 @@ Neste exemplo são utilizados:
 - __init__
 - self
 ```
+
+## Métodos utilizando atributos
+
+Os métodos podem acessar os atributos do próprio objeto utilizando `self`.
+
+Exemplo:
+
+```python
+class ContaBancaria:
+
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.saldo = saldo
+
+    def mostrar_saldo(self):
+        print(f"Saldo atual: R$ {self.saldo}")
+```
+
+O método `mostrar_saldo()` utiliza o atributo `saldo` armazenado no objeto.
