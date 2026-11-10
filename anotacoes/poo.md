@@ -164,3 +164,42 @@ self.nome = nome
 ```
 
 armazena o valor recebido dentro do objeto.
+
+## Exemplo Completo
+
+```python
+class Pessoa:
+
+    def __init__(self, nome):
+        self.nome = nome
+
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome}")
+```
+
+Uso:
+
+```python
+pessoa1 = Pessoa("Otavio")
+pessoa2 = Pessoa("Maria")
+
+pessoa1.apresentar()
+pessoa2.apresentar()
+```
+
+Saída:
+
+```text
+Olá, meu nome é Otavio
+Olá, meu nome é Maria
+```
+
+Neste exemplo são utilizados:
+
+- Classe
+- Objeto
+- Atributo
+- Método
+- __init__
+- self
+```
