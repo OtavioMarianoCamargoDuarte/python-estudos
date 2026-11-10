@@ -17,3 +17,25 @@ except ValueError as erro:
 ```
 
 Quando ocorre um erro do tipo `ValueError`, o programa não é interrompido e o erro pode ser tratado adequadamente.
+
+## Else
+
+O bloco `else` é executado apenas quando nenhum erro ocorre dentro do bloco `try`.
+
+Exemplo:
+
+```python
+try:
+    valor = int(input("Digite um número: "))
+
+except ValueError:
+    print("Erro")
+
+else:
+    print("Sucesso")
+```
+
+Fluxo:
+
+- Se houver erro → executa o except.
+- Se não houver erro → executa o else.
