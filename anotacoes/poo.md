@@ -1,4 +1,4 @@
-# Programação Orientada a Objetos
+# Programação Orientada a Objetos (POO)
 
 ## O que é POO?
 
@@ -17,7 +17,7 @@ Exemplos:
 
 ## Classe
 
-Uma classe é um molde para criar objetos.
+Uma classe é um molde utilizado para criar objetos.
 
 Exemplo:
 
@@ -34,9 +34,20 @@ Neste momento a classe existe, mas nenhum objeto foi criado.
 
 A palavra reservada `pass` indica que nenhum código será executado naquele bloco por enquanto.
 
+Exemplo:
+
+```python
+class Pessoa:
+    pass
+```
+
+É utilizada quando ainda não implementamos a lógica da classe ou função.
+
+---
+
 ## Objeto
 
-Um objeto é uma instância de uma classe.
+Um objeto é uma instância criada a partir de uma classe.
 
 Exemplo:
 
@@ -49,12 +60,14 @@ pessoa1 = Pessoa()
 
 Neste exemplo:
 
-- Pessoa é a classe.
-- pessoa1 é um objeto.
+- `Pessoa` é a classe.
+- `pessoa1` é o objeto.
 
 A classe funciona como um molde.
 
 O objeto é criado a partir desse molde.
+
+---
 
 ## Atributo
 
@@ -68,9 +81,11 @@ pessoa1.nome = "Otavio"
 
 Neste caso:
 
-- pessoa1 é o objeto.
-- nome é o atributo.
-- Otavio é o valor do atributo.
+- `pessoa1` é o objeto.
+- `nome` é o atributo.
+- `"Otavio"` é o valor armazenado.
+
+---
 
 ## Método
 
@@ -87,8 +102,10 @@ class Pessoa:
 
 Neste caso:
 
-- apresentar é um método.
+- `apresentar()` é um método.
 - Métodos representam comportamentos ou ações dos objetos.
+
+---
 
 ## Método __init__
 
@@ -113,6 +130,8 @@ o método `__init__` é chamado automaticamente.
 
 Sua função é inicializar o objeto.
 
+---
+
 ## Self
 
 O parâmetro `self` representa o próprio objeto.
@@ -135,6 +154,8 @@ pessoa1 = Pessoa()
 o Python envia automaticamente esse objeto para o parâmetro `self`.
 
 Cada objeto possui seu próprio `self`.
+
+---
 
 ## Atributos com __init__
 
@@ -165,6 +186,8 @@ self.nome = nome
 
 armazena o valor recebido dentro do objeto.
 
+---
+
 ## Exemplo Completo
 
 ```python
@@ -194,19 +217,20 @@ Olá, meu nome é Otavio
 Olá, meu nome é Maria
 ```
 
-Neste exemplo são utilizados:
+Neste exemplo foram utilizados:
 
 - Classe
 - Objeto
 - Atributo
 - Método
-- __init__
-- self
-```
+- `__init__`
+- `self`
 
-## Métodos utilizando atributos
+---
 
-Os métodos podem acessar os atributos do próprio objeto utilizando `self`.
+## Métodos Utilizando Atributos
+
+Os métodos podem acessar atributos do próprio objeto utilizando `self`.
 
 Exemplo:
 
@@ -223,7 +247,9 @@ class ContaBancaria:
 
 O método `mostrar_saldo()` utiliza o atributo `saldo` armazenado no objeto.
 
-## Métodos podem alterar atributos
+---
+
+## Métodos Podem Alterar Atributos
 
 Os métodos não apenas consultam informações, mas também podem modificar os atributos do objeto.
 
@@ -242,6 +268,8 @@ conta.depositar(500)
 
 o saldo armazenado dentro do objeto é atualizado.
 
+---
+
 ## Validação em Métodos
 
 Os métodos podem conter regras para impedir operações inválidas.
@@ -258,20 +286,34 @@ def sacar(self, valor):
     self.saldo -= valor
 ```
 
-Nesse caso, um saque só será realizado se houver saldo suficiente.
+Neste exemplo:
 
-## Primeira Validação
+- O saque só ocorre se houver saldo suficiente.
+- Caso contrário, o método é interrompido.
+- O saldo permanece inalterado.
 
-Um método pode impedir operações inválidas.
+Validações são utilizadas para proteger os dados do objeto contra alterações incorretas.
 
-Exemplo:
+---
 
-```python
-if valor > self.saldo:
-    print("Saldo insuficiente.")
-    return
-```
+## Resumo dos Conceitos Aprendidos
 
-Nesse caso o método é interrompido e o saldo não é alterado.
+✅ Classe
 
-Essa técnica é utilizada para proteger os dados do objeto contra alterações incorretas.
+✅ Objeto
+
+✅ Atributo
+
+✅ Método
+
+✅ `__init__`
+
+✅ `self`
+
+✅ Métodos utilizando atributos
+
+✅ Métodos alterando atributos
+
+✅ Validações
+
+✅ Regras de negócio

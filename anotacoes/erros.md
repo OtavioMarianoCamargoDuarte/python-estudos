@@ -1,5 +1,32 @@
 # Tratamento de Erros
 
+## O que é Tratamento de Erros?
+
+O tratamento de erros permite que o programa lide com situações inesperadas sem encerrar sua execução de forma abrupta.
+
+Exemplos:
+
+- Usuário digitar texto quando um número é esperado.
+- Tentativa de divisão por zero.
+- Acesso a uma posição inexistente de uma lista.
+
+---
+
+## Raise
+
+A instrução `raise` é utilizada para lançar um erro manualmente.
+
+Exemplo:
+
+```python
+if valor > saldo:
+    raise ValueError("Saldo insuficiente.")
+```
+
+Quando essa linha é executada, o Python interrompe o fluxo normal e gera uma exceção.
+
+---
+
 ## Try e Except
 
 O bloco `try` é utilizado para executar um código que pode gerar erro.
@@ -17,6 +44,8 @@ except ValueError as erro:
 ```
 
 Quando ocorre um erro do tipo `ValueError`, o programa não é interrompido e o erro pode ser tratado adequadamente.
+
+---
 
 ## Else
 
@@ -37,8 +66,10 @@ else:
 
 Fluxo:
 
-- Se houver erro → executa o except.
-- Se não houver erro → executa o else.
+- Se houver erro → executa o `except`.
+- Se não houver erro → executa o `else`.
+
+---
 
 ## Finally
 
@@ -57,6 +88,8 @@ finally:
 
 O código dentro do `finally` sempre será executado.
 
+---
+
 ## Múltiplos Except
 
 Um programa pode tratar diferentes tipos de erro.
@@ -64,24 +97,25 @@ Um programa pode tratar diferentes tipos de erro.
 Exemplo:
 
 ```python
+try:
+    numero = int(input())
+
 except ValueError:
-```
+    print("Digite apenas números.")
 
-Utilizado quando um valor inválido é informado.
-
-```python
 except ZeroDivisionError:
+    print("Não é possível dividir por zero.")
 ```
-
-Utilizado quando ocorre uma divisão por zero.
 
 Cada tipo de erro pode receber um tratamento específico.
+
+---
 
 ## Erros Comuns
 
 ### ValueError
 
-Ocorre quando um valor possui um tipo inválido.
+Ocorre quando um valor possui um formato ou tipo inválido.
 
 Exemplo:
 
@@ -89,16 +123,28 @@ Exemplo:
 int("otavio")
 ```
 
+Resultado:
+
+```python
+ValueError
+```
+
 ---
 
 ### ZeroDivisionError
 
-Ocorre quando tentamos dividir por zero.
+Ocorre quando tentamos dividir um número por zero.
 
 Exemplo:
 
 ```python
 10 / 0
+```
+
+Resultado:
+
+```python
+ZeroDivisionError
 ```
 
 ---
@@ -114,6 +160,14 @@ numeros = [10, 20, 30]
 
 print(numeros[5])
 ```
+
+Resultado:
+
+```python
+IndexError
+```
+
+---
 
 ## Validação com Loop
 
@@ -132,10 +186,10 @@ Exemplo:
 while True:
 
     try:
-        idade = int(input())
+        idade = int(input("Digite sua idade: "))
 
     except ValueError:
-        print("Erro")
+        print("Digite apenas números.")
 
     else:
         break
@@ -143,20 +197,112 @@ while True:
 
 Essa técnica é muito utilizada em sistemas reais.
 
-## Ordem de execução
+---
 
-Fluxo completo:
+## Ordem de Execução
+
+Estrutura completa:
 
 ```python
-try
-except
-else
-finally
+try:
+    ...
+
+except:
+    ...
+
+else:
+    ...
+
+finally:
+    ...
 ```
 
-- try → tenta executar.
-- except → trata erros.
-- else → executa se não houver erro.
-- finally → executa sempre.
+Fluxo:
 
-O bloco finally é executado independentemente do resultado da operação.
+- `try` → tenta executar o código.
+- `except` → executa quando ocorre um erro.
+- `else` → executa quando não ocorre erro.
+- `finally` → executa sempre.
+
+Representação visual:
+
+```text
+try
+ │
+ ├─ erro?
+ │
+ ├─ Sim ──► except
+ │
+ └─ Não ─► else
+             │
+             ▼
+          finally
+```
+
+---
+
+## Exemplo Completo
+
+```python
+while True:
+
+    try:
+
+        numero1 = float(input("Primeiro número: "))
+        numero2 = float(input("Segundo número: "))
+
+        resultado = numero1 / numero2
+
+    except ValueError:
+
+        print("Digite apenas números.")
+
+    except ZeroDivisionError:
+
+        print("Não é possível dividir por zero.")
+
+    else:
+
+        print(f"Resultado: {resultado}")
+        break
+
+    finally:
+
+        print("Tentativa encerrada.")
+```
+
+Nesse exemplo utilizamos:
+
+- while
+- try
+- except
+- else
+- finally
+- ValueError
+- ZeroDivisionError
+
+---
+
+## Resumo dos Conceitos Aprendidos
+
+✅ Raise
+
+✅ Try
+
+✅ Except
+
+✅ Else
+
+✅ Finally
+
+✅ ValueError
+
+✅ ZeroDivisionError
+
+✅ IndexError
+
+✅ Múltiplos Except
+
+✅ Validação com Loop
+
+✅ Fluxo de Tratamento de Erros
