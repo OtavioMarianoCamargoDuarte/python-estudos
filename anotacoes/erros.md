@@ -56,3 +56,23 @@ finally:
 ```
 
 O código dentro do `finally` sempre será executado.
+
+## Múltiplos Except
+
+Um programa pode tratar diferentes tipos de erro.
+
+Exemplo:
+
+```python
+except ValueError:
+```
+
+Utilizado quando um valor inválido é informado.
+
+```python
+except ZeroDivisionError:
+```
+
+Utilizado quando ocorre uma divisão por zero.
+
+Cada tipo de erro pode receber um tratamento específico.
