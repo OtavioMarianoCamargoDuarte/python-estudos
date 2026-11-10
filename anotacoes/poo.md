@@ -89,3 +89,26 @@ Neste caso:
 
 - apresentar é um método.
 - Métodos representam comportamentos ou ações dos objetos.
+
+## Método __init__
+
+O método `__init__` é executado automaticamente quando um objeto é criado.
+
+Exemplo:
+
+```python
+class Pessoa:
+
+    def __init__(self):
+        print("Pessoa criada!")
+```
+
+Ao executar:
+
+```python
+pessoa1 = Pessoa()
+```
+
+o método `__init__` é chamado automaticamente.
+
+Sua função é inicializar o objeto.
