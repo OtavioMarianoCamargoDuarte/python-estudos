@@ -39,3 +39,20 @@ Fluxo:
 
 - Se houver erro → executa o except.
 - Se não houver erro → executa o else.
+
+## Finally
+
+O bloco `finally` é executado independentemente de ocorrer erro ou não.
+
+Exemplo:
+
+```python
+try:
+    ...
+except:
+    ...
+finally:
+    print("Fim")
+```
+
+O código dentro do `finally` sempre será executado.
