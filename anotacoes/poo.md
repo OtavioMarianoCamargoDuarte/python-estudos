@@ -55,3 +55,19 @@ Neste exemplo:
 A classe funciona como um molde.
 
 O objeto é criado a partir desse molde.
+
+## Atributo
+
+Um atributo é uma informação armazenada dentro de um objeto.
+
+Exemplo:
+
+```python
+pessoa1.nome = "Otavio"
+```
+
+Neste caso:
+
+- pessoa1 é o objeto.
+- nome é o atributo.
+- Otavio é o valor do atributo.
