@@ -4,13 +4,13 @@
 
 Git é um sistema de controle de versão utilizado para acompanhar alterações em arquivos e projetos.
 
-Ele permite salvar diferentes versões do código e voltar para versões anteriores quando necessário.
+Ele permite salvar diferentes versões do código e recuperar versões anteriores quando necessário.
 
 ---
 
 ## O que é um Repositório?
 
-Um repositório é uma pasta que está sendo monitorada pelo Git.
+Um repositório é uma pasta monitorada pelo Git.
 
 Para criar um repositório:
 
@@ -18,13 +18,19 @@ Para criar um repositório:
 git init
 ```
 
-Esse comando cria uma pasta oculta chamada `.git`, responsável por armazenar todo o histórico do projeto.
+Esse comando cria uma pasta oculta chamada:
+
+```text
+.git
+```
+
+Essa pasta guarda todo o histórico do projeto.
 
 ---
 
-## Verificando o Status do Projeto
+## Verificando o Status
 
-Para verificar a situação atual dos arquivos:
+Para verificar a situação atual do projeto:
 
 ```bash
 git status
@@ -32,53 +38,61 @@ git status
 
 Possíveis estados:
 
-- Untracked: arquivo ainda não monitorado pelo Git.
-- Staged: arquivo preparado para o próximo commit.
-- Commitado: arquivo salvo no histórico do Git.
+### Untracked
+
+Arquivos que existem no computador, mas ainda não são monitorados pelo Git.
+
+### Staged
+
+Arquivos preparados para entrar no próximo commit.
+
+### Commitado
+
+Arquivos salvos no histórico do Git.
 
 ---
 
 ## Adicionando Arquivos
 
-Para preparar arquivos para um commit:
+Para adicionar arquivos ao Staging Area:
 
 ```bash
 git add .
 ```
 
-O ponto (`.`) significa que todos os arquivos alterados serão adicionados.
+O ponto (`.`) significa adicionar todas as alterações da pasta atual.
 
 ---
 
-## Criando um Commit
+## O que é um Commit?
 
-Um commit é uma fotografia do projeto em determinado momento.
+Um commit é uma fotografia do projeto em um determinado momento.
 
 Exemplo:
 
 ```bash
-git commit -m "Cria estrutura inicial de anotações"
+git commit -m "Cria estrutura inicial de estudos"
 ```
 
 Boas práticas:
 
-- Mensagens curtas.
-- Mensagens objetivas.
-- Descrever o que foi feito.
+- Mensagens curtas
+- Mensagens objetivas
+- Descrever o que foi feito
 
 Exemplos:
 
 ```bash
 git commit -m "Adiciona exercícios de POO"
-git commit -m "Corrige validação de preço"
+git commit -m "Corrige validação da classe Conta"
 git commit -m "Atualiza documentação"
 ```
 
 ---
 
-## Consultando o Histórico
+## Histórico de Commits
 
-Para visualizar os commits realizados:
+Para visualizar o histórico:
 
 ```bash
 git log --oneline
@@ -86,7 +100,7 @@ git log --oneline
 
 Exemplo:
 
-```bash
+```text
 519d883 Cria estrutura inicial de anotações
 ```
 
@@ -94,17 +108,79 @@ Cada commit possui um identificador único.
 
 ---
 
-## Fluxo Básico do Git
+## Branch
 
-O fluxo mais comum é:
+Uma branch é uma linha de desenvolvimento.
 
-```bash
-git status
-git add .
-git commit -m "Descrição da alteração"
+A branch principal normalmente se chama:
+
+```text
+main
 ```
 
-Mais tarde, quando o projeto estiver conectado ao GitHub:
+ou
+
+```text
+master
+```
+
+Verificar a branch atual:
+
+```bash
+git branch
+```
+
+Ver todas as branches:
+
+```bash
+git branch -a
+```
+
+No meu projeto atualmente:
+
+```text
+master
+```
+
+---
+
+## Remote
+
+Um remote é um repositório armazenado em outro local, normalmente no GitHub.
+
+Verificar remotes configurados:
+
+```bash
+git remote -v
+```
+
+Adicionar um remote:
+
+```bash
+git remote add origin URL_DO_REPOSITORIO
+```
+
+No meu projeto:
+
+```text
+origin
+```
+
+é o apelido do repositório hospedado no GitHub.
+
+---
+
+## Push
+
+Push envia os commits locais para o GitHub.
+
+Primeiro envio:
+
+```bash
+git push -u origin master
+```
+
+Depois:
 
 ```bash
 git push
@@ -112,9 +188,22 @@ git push
 
 ---
 
-## O que aprendi na prática
+## Fluxo Básico do Git
 
-✅ Instalar e verificar o Git
+Fluxo mais utilizado no dia a dia:
+
+```bash
+git status
+git add .
+git commit -m "Descrição da alteração"
+git push
+```
+
+---
+
+## O que Aprendi
+
+✅ Instalar o Git
 
 ```bash
 git --version
@@ -150,21 +239,37 @@ git commit -m "mensagem"
 git log --oneline
 ```
 
-✅ Entender os conceitos:
+✅ Verificar branches
+
+```bash
+git branch
+```
+
+✅ Verificar remotes
+
+```bash
+git remote -v
+```
+
+✅ Entender os conceitos de:
 
 - Repositório
 - Commit
 - Histórico
+- Branch
+- Remote
+- Push
 - Staging Area
 - Arquivos rastreados
 - Arquivos não rastreados
 
 ---
 
-## Observações
+## Observações Importantes
 
 - O Git rastreia arquivos.
 - O Git não rastreia pastas vazias.
 - A pasta `.git` guarda todo o histórico do projeto.
-- Um commit é uma fotografia do projeto em um determinado momento.
-
+- Um commit é uma fotografia do projeto.
+- O Git funciona localmente mesmo sem GitHub.
+- O GitHub é utilizado para armazenar os repositórios na nuvem.
