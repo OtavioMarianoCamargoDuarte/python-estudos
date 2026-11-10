@@ -222,3 +222,22 @@ class ContaBancaria:
 ```
 
 O método `mostrar_saldo()` utiliza o atributo `saldo` armazenado no objeto.
+
+## Métodos podem alterar atributos
+
+Os métodos não apenas consultam informações, mas também podem modificar os atributos do objeto.
+
+Exemplo:
+
+```python
+def depositar(self, valor):
+    self.saldo += valor
+```
+
+Ao executar:
+
+```python
+conta.depositar(500)
+```
+
+o saldo armazenado dentro do objeto é atualizado.
