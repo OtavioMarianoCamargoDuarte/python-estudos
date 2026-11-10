@@ -259,3 +259,19 @@ def sacar(self, valor):
 ```
 
 Nesse caso, um saque só será realizado se houver saldo suficiente.
+
+## Primeira Validação
+
+Um método pode impedir operações inválidas.
+
+Exemplo:
+
+```python
+if valor > self.saldo:
+    print("Saldo insuficiente.")
+    return
+```
+
+Nesse caso o método é interrompido e o saldo não é alterado.
+
+Essa técnica é utilizada para proteger os dados do objeto contra alterações incorretas.
