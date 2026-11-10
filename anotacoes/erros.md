@@ -114,3 +114,31 @@ numeros = [10, 20, 30]
 
 print(numeros[5])
 ```
+
+## Validação com Loop
+
+Podemos combinar:
+
+- while
+- try
+- except
+- else
+
+para repetir a entrada de dados até que o usuário informe um valor válido.
+
+Exemplo:
+
+```python
+while True:
+
+    try:
+        idade = int(input())
+
+    except ValueError:
+        print("Erro")
+
+    else:
+        break
+```
+
+Essa técnica é muito utilizada em sistemas reais.
