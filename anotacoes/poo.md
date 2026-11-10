@@ -241,3 +241,21 @@ conta.depositar(500)
 ```
 
 o saldo armazenado dentro do objeto é atualizado.
+
+## Validação em Métodos
+
+Os métodos podem conter regras para impedir operações inválidas.
+
+Exemplo:
+
+```python
+def sacar(self, valor):
+
+    if valor > self.saldo:
+        print("Saldo insuficiente.")
+        return
+
+    self.saldo -= valor
+```
+
+Nesse caso, um saque só será realizado se houver saldo suficiente.
