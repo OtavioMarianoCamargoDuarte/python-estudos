@@ -4,14 +4,12 @@ class ContaBancaria:
         self.titular = titular
         self.saldo = saldo
 
-    def sacar(self, valor):
-
-        if valor > self.saldo:
-            raise ValueError("Saldo insuficiente.")
-
-        self.saldo -= valor
+    def depositar(self, valor):
+        self.saldo += valor
 
 
-conta1 = ContaBancaria('Otavio', 1000)
+conta1 = ContaBancaria("Otavio", 1000)
 
-conta1.sacar(1500)
+conta1.depositar(500)
+
+print(conta1.saldo)
