@@ -76,3 +76,41 @@ except ZeroDivisionError:
 Utilizado quando ocorre uma divisão por zero.
 
 Cada tipo de erro pode receber um tratamento específico.
+
+## Erros Comuns
+
+### ValueError
+
+Ocorre quando um valor possui um tipo inválido.
+
+Exemplo:
+
+```python
+int("otavio")
+```
+
+---
+
+### ZeroDivisionError
+
+Ocorre quando tentamos dividir por zero.
+
+Exemplo:
+
+```python
+10 / 0
+```
+
+---
+
+### IndexError
+
+Ocorre quando tentamos acessar uma posição inexistente em uma lista.
+
+Exemplo:
+
+```python
+numeros = [10, 20, 30]
+
+print(numeros[5])
+```
