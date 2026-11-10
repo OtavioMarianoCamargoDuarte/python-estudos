@@ -135,3 +135,32 @@ pessoa1 = Pessoa()
 o Python envia automaticamente esse objeto para o parâmetro `self`.
 
 Cada objeto possui seu próprio `self`.
+
+## Atributos com __init__
+
+O método `__init__` pode receber valores no momento da criação do objeto.
+
+Exemplo:
+
+```python
+class Pessoa:
+
+    def __init__(self, nome):
+        self.nome = nome
+```
+
+Ao criar:
+
+```python
+pessoa1 = Pessoa("Otavio")
+```
+
+o atributo `nome` recebe o valor `"Otavio"`.
+
+A instrução:
+
+```python
+self.nome = nome
+```
+
+armazena o valor recebido dentro do objeto.
