@@ -71,3 +71,21 @@ Neste caso:
 - pessoa1 é o objeto.
 - nome é o atributo.
 - Otavio é o valor do atributo.
+
+## Método
+
+Um método é uma ação que um objeto pode executar.
+
+Exemplo:
+
+```python
+class Pessoa:
+
+    def apresentar(self):
+        print("Olá!")
+```
+
+Neste caso:
+
+- apresentar é um método.
+- Métodos representam comportamentos ou ações dos objetos.
