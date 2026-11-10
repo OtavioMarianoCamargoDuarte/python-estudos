@@ -112,3 +112,26 @@ pessoa1 = Pessoa()
 o método `__init__` é chamado automaticamente.
 
 Sua função é inicializar o objeto.
+
+## Self
+
+O parâmetro `self` representa o próprio objeto.
+
+Exemplo:
+
+```python
+class Pessoa:
+
+    def __init__(self):
+        print(self)
+```
+
+Quando um objeto é criado:
+
+```python
+pessoa1 = Pessoa()
+```
+
+o Python envia automaticamente esse objeto para o parâmetro `self`.
+
+Cada objeto possui seu próprio `self`.
