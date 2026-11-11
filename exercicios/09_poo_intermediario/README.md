@@ -12,3 +12,4 @@ Conteúdo estudado:
 
 - exercicio01_encapsulamento.py
 - exercicio02_atributo_protegido.py
+- exercicio03_property.py

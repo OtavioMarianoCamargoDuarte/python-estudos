@@ -331,3 +331,28 @@ self._nome = nome
 O Python permite o acesso, mas sinaliza que esse atributo não deveria ser alterado diretamente fora da classe.
 
 Essa técnica é utilizada como primeiro passo para o encapsulamento.
+
+## Property
+
+O decorator `@property` permite acessar métodos como se fossem atributos.
+
+Exemplo:
+
+```python
+class Pessoa:
+
+    def __init__(self, nome):
+        self._nome = nome
+
+    @property
+    def nome(self):
+        return self._nome
+```
+
+Uso:
+
+```python
+pessoa.nome
+```
+
+Mesmo sendo um método internamente, ele é utilizado como um atributo.
