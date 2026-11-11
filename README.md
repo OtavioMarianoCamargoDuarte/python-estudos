@@ -5,8 +5,8 @@ Repositório criado para registrar minha evolução nos estudos de Python.
 ## Conteúdo
 
 ### Git
-- Git básico
 - Commits
+- Branches
 - Tags
 - GitHub
 
@@ -32,11 +32,11 @@ Repositório criado para registrar minha evolução nos estudos de Python.
 ```text
 anotacoes/
 exercicios/
-desafios/
-portfolio/
 projetos/
+portfolio/
+desafios/
 ```
 
 ## Objetivo
 
-Construir uma base sólida em Python para conquistar uma oportunidade como Desenvolvedor Python.
+Construir uma base sólida em Python para conquistar uma oportunidade como desenvolvedor Python.
