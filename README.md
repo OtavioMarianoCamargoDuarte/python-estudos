@@ -5,25 +5,27 @@ Repositório criado para registrar minha evolução nos estudos de Python.
 ## Conteúdo
 
 ### Git
-- Conceitos básicos
+- Git básico
 - Commits
-- Push
-- Histórico
+- Tags
+- GitHub
 
 ### Programação Orientada a Objetos
 - Classe
 - Objeto
 - Atributo
 - Método
-- __init__
-- self
+- Encapsulamento
+- Property
+- Setter
+- __str__
 
 ### Tratamento de Erros
+- raise
 - try
 - except
 - else
 - finally
-- raise
 
 ## Estrutura
 
