@@ -317,3 +317,17 @@ Validações são utilizadas para proteger os dados do objeto contra alteraçõe
 ✅ Validações
 
 ✅ Regras de negócio
+
+## Atributo Protegido
+
+Por convenção, atributos que começam com `_` são considerados internos da classe.
+
+Exemplo:
+
+```python
+self._nome = nome
+```
+
+O Python permite o acesso, mas sinaliza que esse atributo não deveria ser alterado diretamente fora da classe.
+
+Essa técnica é utilizada como primeiro passo para o encapsulamento.
