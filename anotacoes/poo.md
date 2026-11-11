@@ -569,3 +569,31 @@ conta.participantes.append(pessoa1)
 Nesse caso a classe `Conta` está armazenando objetos da classe `Pessoa`.
 
 Esse tipo de relacionamento é muito utilizado em sistemas reais.
+
+## Classes Controlando Seus Dados
+
+Uma classe pode possuir métodos responsáveis por alterar seus próprios atributos.
+
+Exemplo:
+
+```python
+def adicionar_participante(self, pessoa):
+    self.participantes.append(pessoa)
+```
+
+Uso:
+
+```python
+conta.adicionar_participante(pessoa1)
+```
+
+Nesse caso o objeto da classe `Conta` controla como os participantes são adicionados.
+
+### Vantagens
+
+- Código mais organizado.
+- Regras centralizadas na classe.
+- Menos acesso direto aos atributos.
+- Mais fácil adicionar validações futuramente.
+
+Essa abordagem é muito utilizada em sistemas orientados a objetos.
