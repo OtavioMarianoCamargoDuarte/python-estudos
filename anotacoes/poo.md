@@ -508,3 +508,41 @@ pessoas.append(pessoa2)
 ```
 
 Nesse caso a lista não está armazenando textos ou números, mas sim objetos da classe `Pessoa`.
+
+---
+
+## Percorrendo Objetos em uma Lista
+
+Podemos percorrer uma lista de objetos utilizando um laço `for`.
+
+Exemplo:
+
+```python
+for pessoa in pessoas:
+    print(pessoa.nome)
+```
+
+Cada elemento percorrido será um objeto completo da classe.
+
+Isso permite acessar:
+
+- atributos
+- métodos
+- propriedades
+
+de cada objeto armazenado na lista.
+
+Exemplo:
+
+```python
+for pessoa in pessoas:
+    print(pessoa.nome)
+```
+
+Saída:
+
+```text
+Otavio
+Maria
+João
+```

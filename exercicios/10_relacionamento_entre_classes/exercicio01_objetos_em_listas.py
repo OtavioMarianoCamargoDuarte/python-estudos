@@ -1,7 +1,10 @@
 class Pessoa:
 
     def __init__(self, nome):
-        self._nome = nome
+        self.nome = nome
+
+    def __str__(self):
+        return self.nome
 
 
 pessoa1 = Pessoa('Otavio')
