@@ -356,3 +356,28 @@ pessoa.nome
 ```
 
 Mesmo sendo um método internamente, ele é utilizado como um atributo.
+
+## Setter
+
+O setter permite validar alterações em um atributo.
+
+Exemplo:
+
+```python
+@nome.setter
+def nome(self, novo_nome):
+
+    if not novo_nome:
+        print("Nome inválido.")
+        return
+
+    self._nome = novo_nome
+```
+
+O setter é executado automaticamente quando fazemos:
+
+```python
+pessoa.nome = "Maria"
+```
+
+Ele permite verificar se o novo valor é válido antes de alterar o atributo.
