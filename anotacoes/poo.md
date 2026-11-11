@@ -546,3 +546,26 @@ Otavio
 Maria
 João
 ```
+
+## Objetos Dentro de Outras Classes
+
+Uma classe pode armazenar objetos de outra classe.
+
+Exemplo:
+
+```python
+class Conta:
+
+    def __init__(self):
+        self.participantes = []
+```
+
+Uso:
+
+```python
+conta.participantes.append(pessoa1)
+```
+
+Nesse caso a classe `Conta` está armazenando objetos da classe `Pessoa`.
+
+Esse tipo de relacionamento é muito utilizado em sistemas reais.

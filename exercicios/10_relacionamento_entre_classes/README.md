@@ -11,3 +11,4 @@ Conteúdo estudado:
 
 - exercicio01_objetos_em_lista.py
 - exercicio02_percorrendo_objetos.py
+- exercicio03_conta_e_pessoas.py
