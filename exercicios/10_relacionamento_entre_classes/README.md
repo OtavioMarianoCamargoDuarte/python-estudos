@@ -6,3 +6,7 @@ Conteúdo estudado:
 - Pessoa e Conta
 - Composição
 - Projeto prático
+- 
+## Exercícios
+
+- exercicio01_objetos_em_lista.py

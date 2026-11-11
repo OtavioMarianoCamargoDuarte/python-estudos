@@ -493,3 +493,18 @@ Saída:
 ```text
 Otavio - Saldo: R$ 1000
 ```
+
+## Objetos em Listas
+
+Uma lista pode armazenar objetos criados a partir de classes.
+
+Exemplo:
+
+```python
+pessoas = []
+
+pessoas.append(pessoa1)
+pessoas.append(pessoa2)
+```
+
+Nesse caso a lista não está armazenando textos ou números, mas sim objetos da classe `Pessoa`.
