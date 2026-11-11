@@ -381,3 +381,115 @@ pessoa.nome = "Maria"
 ```
 
 Ele permite verificar se o novo valor é válido antes de alterar o atributo.
+
+## Método Especial __str__
+
+O método `__str__()` é utilizado para definir como um objeto será exibido quando usamos a função `print()`.
+
+Sem `__str__()`:
+
+```python
+class Pessoa:
+
+    def __init__(self, nome):
+        self._nome = nome
+
+
+pessoa = Pessoa("Otavio")
+
+print(pessoa)
+```
+
+Saída:
+
+```text
+<__main__.Pessoa object at 0x000001F2A4B8E710>
+```
+
+Essa saída não é amigável para o usuário.
+
+---
+
+Com `__str__()`:
+
+```python
+class Pessoa:
+
+    def __init__(self, nome):
+        self._nome = nome
+
+    def __str__(self):
+        return f"Pessoa: {self._nome}"
+```
+
+Uso:
+
+```python
+pessoa = Pessoa("Otavio")
+
+print(pessoa)
+```
+
+Saída:
+
+```text
+Pessoa: Otavio
+```
+
+---
+
+### Funcionamento
+
+Quando utilizamos:
+
+```python
+print(pessoa)
+```
+
+o Python procura automaticamente pelo método:
+
+```python
+__str__()
+```
+
+Se ele existir, o valor retornado será exibido.
+
+Se não existir, o Python exibirá uma representação padrão do objeto na memória.
+
+---
+
+### Vantagens
+
+- Exibir informações mais amigáveis.
+- Facilitar a leitura durante testes.
+- Melhorar a depuração do código.
+- Tornar objetos mais fáceis de entender ao usar `print()`.
+
+---
+
+### Exemplo com Conta Bancária
+
+```python
+class ContaBancaria:
+
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.saldo = saldo
+
+    def __str__(self):
+        return f"{self.titular} - Saldo: R$ {self.saldo}"
+```
+
+Uso:
+
+```python
+conta = ContaBancaria("Otavio", 1000)
+
+print(conta)
+```
+
+Saída:
+
+```text
+Otavio - Saldo: R$ 1000
+```

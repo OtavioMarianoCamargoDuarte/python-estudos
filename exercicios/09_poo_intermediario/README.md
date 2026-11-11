@@ -14,3 +14,4 @@ Conteúdo estudado:
 - exercicio02_atributo_protegido.py
 - exercicio03_property.py
 - exercicio04_setter.py
+- exercicio05_str.py
