@@ -597,3 +597,21 @@ Nesse caso o objeto da classe `Conta` controla como os participantes são adicio
 - Mais fácil adicionar validações futuramente.
 
 Essa abordagem é muito utilizada em sistemas orientados a objetos.
+
+## Regras de Negócio
+
+As classes podem conter regras para proteger seus dados.
+
+Exemplo:
+
+```python
+if pessoa in self.participantes:
+    print("Participante já cadastrado.")
+    return
+```
+
+Nesse caso a classe impede a inclusão de participantes duplicados.
+
+Isso mantém os dados consistentes e evita informações incorretas.
+
+As regras de negócio normalmente ficam dentro dos métodos da própria classe.

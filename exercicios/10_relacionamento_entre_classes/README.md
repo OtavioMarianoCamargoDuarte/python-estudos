@@ -13,3 +13,4 @@ Conteúdo estudado:
 - exercicio02_percorrendo_objetos.py
 - exercicio03_conta_e_pessoas.py
 - exercicio04_adicionar_participante.py
+- exercicio05_validando_participantes.py
